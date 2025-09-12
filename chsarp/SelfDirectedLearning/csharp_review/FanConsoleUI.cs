@@ -66,10 +66,13 @@ namespace reviewLib
                     SelectChangeMenu();
                     break;
                 case MENULIST.PRINT:
+                    if (IsMenuAvailablity()) return;
+                    PrintPrintMenu();
                     SelectPrintMenu();
                     break;
             }
         }
+
 
         private void PrintCreatMenu()
         {
@@ -116,10 +119,24 @@ namespace reviewLib
             Console.WriteLine($"0.돌아가기\n");
             Console.WriteLine("=========================\n");
         }
+
+        private void PrintPrintMenu()
+        {
+            Console.Clear();
+            Console.WriteLine("===== 출력 메뉴 선택 =====\n");
+            Console.WriteLine($"1. 단일 출력"); // in this phase user must input certain index that is in the list
+            Console.WriteLine($"2. 전체 출력"); // 
+
+            Console.WriteLine();
+            Console.WriteLine($"0.돌아가기\n");
+            Console.WriteLine("=========================\n");
+        }
+
         private bool IsMenuAvailablity()
         {
             if (fm.IsListEmpty())
             {
+                Console.Clear();
                 Console.WriteLine("생성된 선풍기 없음");
                 return true;
             }
@@ -145,8 +162,6 @@ namespace reviewLib
             }
         }
 
-        
-
         private void PrintSingleFanChangeMenu()
         {
             Console.Clear();
@@ -162,6 +177,7 @@ namespace reviewLib
         private void SelectSingleFanChangeMenu()
         {
             Fan curFan = fm.GetFan(GetValidIndex());
+            fm.PrintFan(curFan);
             Fan tempFan = ChangeFan();
             if (tempFan == null)
                 return;
@@ -171,7 +187,10 @@ namespace reviewLib
         private void SelectMultipleFanChangeMenu()
         {
             Fan tempFan = ChangeFan();
-            foreach(fm.)
+            foreach (Fan curFan in fm.GetList)
+            {
+                curFan.Apply(tempFan);
+            }
         }
 
         // 선풍기 변경 로직 -> change fan 을 통해 임시 팬을 하나 만들고, 그 상태를 fan.ApplyState로 복붙
@@ -189,13 +208,11 @@ namespace reviewLib
             return tempFan;
         }
 
-
-
         private bool ChangeFanPower(Fan _fan)
         {
             Console.WriteLine("선풍기 전원 메뉴");
-            Console.WriteLine("1. 끄기");
-            Console.WriteLine("2. 켜기");
+            Console.WriteLine("1. 켜기");
+            Console.WriteLine("2. 끄기");
             Console.WriteLine("0. 돌아가기");
 
             switch (InputHandler.GetMenuInput<CHANGEPOWERLIST>())
@@ -211,21 +228,23 @@ namespace reviewLib
         private bool ChangeFanSpeed(Fan _fan)
         {
             Console.WriteLine("선풍기 속도 변경 메뉴");
-            Console.WriteLine("1. 끄기");
+            Console.WriteLine("1. 바람 없음");
             Console.WriteLine("2. 미풍");
             Console.WriteLine("3. 약풍");
             Console.WriteLine("4. 강풍");
+            Console.WriteLine("0. 돌아가기");
+
             switch (InputHandler.GetMenuInput<CHANGESPEEDLIST>())
             {
                 case CHANGESPEEDLIST.QUIT: return false;
                 case CHANGESPEEDLIST.LV0:
-                    _fan.Speed = Fan.SPEED_STATE.SPEED_LV1; break;
+                    _fan.Speed = Fan.SPEED_STATE.SPEED_LV0; break;
                 case CHANGESPEEDLIST.LV1:
                     _fan.Speed = Fan.SPEED_STATE.SPEED_LV1; break;
                 case CHANGESPEEDLIST.LV2:
-                    _fan.Speed = Fan.SPEED_STATE.SPEED_LV1; break;
+                    _fan.Speed = Fan.SPEED_STATE.SPEED_LV2; break;
                 case CHANGESPEEDLIST.LV3:
-                    _fan.Speed = Fan.SPEED_STATE.SPEED_LV1; break;
+                    _fan.Speed = Fan.SPEED_STATE.SPEED_LV3; break;
             }
             return true;
         }
@@ -233,8 +252,10 @@ namespace reviewLib
         {
 
             Console.WriteLine("선풍기 회전 메뉴");
-            Console.WriteLine("1. 끄기");
-            Console.WriteLine("2. 켜기");
+            Console.WriteLine("1. 켜기");
+            Console.WriteLine("2. 끄기");
+
+            Console.WriteLine("0. 돌아가기");
             switch (InputHandler.GetMenuInput<CHANGESWINGLIST>())
             {
                 case CHANGESWINGLIST.QUIT: return false;
@@ -248,9 +269,6 @@ namespace reviewLib
             return true;
         }
 
-
-
-
         private void SelectPrintMenu()
         {
             switch (InputHandler.GetMenuInput<PRINTLIST>())
@@ -260,11 +278,39 @@ namespace reviewLib
                     return;
 
                 case PRINTLIST.SINGLE_PRINT:
-
+                    PrintSingleFanPrintMenu();
+                    SelectSingleFanPrintMenu();
                     break;
                 case PRINTLIST.MULTIPLE_PRINT:
-
+                    PrintMultipleFan();
                     break;
+            }
+        }
+
+
+
+        private void PrintSingleFanPrintMenu()
+        {
+            Console.Clear();
+            Console.WriteLine("===== 단일 출력 메뉴 선택 =====\n");
+            Console.WriteLine($"현재 생성 된 선풍기 수: {fm.GetListLength}개\n");
+            Console.WriteLine("출력할 선풍기 번호 입력");
+
+            Console.WriteLine();
+            Console.WriteLine($"0.돌아가기\n");
+            Console.WriteLine("=========================\n");
+        }
+
+        private void SelectSingleFanPrintMenu()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void PrintMultipleFan()
+        {
+            foreach (Fan curFan in fm.GetList)
+            {
+                fm.PrintFan(curFan);
             }
         }
 
