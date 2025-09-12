@@ -36,7 +36,7 @@ namespace reviewLib
 
         private void PrintFanMenu()
         {
-            Console.WriteLine($"\n현재 생성 된 선풍기 수: {fm.GetListLength}개\n");
+            Console.WriteLine($"현재 생성 된 선풍기 수: {fm.GetListLength}개\n");
             Console.WriteLine("======= 메뉴 선택 =======\n");
             Console.WriteLine($"1. 선풍기 생성");
             Console.WriteLine($"2. 선풍기 상태 변경");
@@ -56,19 +56,19 @@ namespace reviewLib
                     QuitProgram();
                     return;
 
-                case MENULIST.CREATE:
+                case MENULIST.CREATE: // 생성
                     PrintCreatMenu();
                     SelectCreateMenu();
                     break;
-                case MENULIST.CHANGE:
+                case MENULIST.CHANGE: // 상태 변경
                     if (IsMenuAvailablity()) return;
                     PrintChangeMenu();
                     SelectChangeMenu();
                     break;
-                case MENULIST.PRINT:
+                case MENULIST.PRINT: // 상태 출력
                     if (IsMenuAvailablity()) return;
-                    PrintPrintMenu();
-                    SelectPrintMenu();
+                    PrintPrintMenu(); // 출력 메뉴 출력
+                    SelectPrintMenu(); // 출력 메뉴 선택 입력
                     break;
             }
         }
@@ -301,9 +301,12 @@ namespace reviewLib
             Console.WriteLine("=========================\n");
         }
 
+
+        // 단일 출력
         private void SelectSingleFanPrintMenu()
         {
-            throw new NotImplementedException();
+            Fan curFan = fm.GetFan(GetValidIndex());
+            fm.PrintFan(curFan);
         }
 
         private void PrintMultipleFan()

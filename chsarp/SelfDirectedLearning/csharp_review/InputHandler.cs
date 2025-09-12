@@ -9,7 +9,7 @@
                 Console.Write("입력: ");
                 if (int.TryParse(Console.ReadLine(), out int input) && Enum.IsDefined(typeof(T), input))
                     return (T)(object)input;
-                Console.Write("잘못 된 입력\n");
+                Console.Write("존재하지 않는 메뉴 입력\n");
             }
         }
         public static int GetIntInput()

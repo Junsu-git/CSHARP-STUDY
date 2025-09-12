@@ -34,7 +34,7 @@
         public void PrintFan(Fan _fan)
         {
             Console.WriteLine("==================================");
-            Console.WriteLine($"{_fan.Index}번쨰 선풍기의 상태\n");
+            Console.WriteLine($"{_fan.Index + 1}번째 선풍기의 상태\n");
             Console.WriteLine($"전원 상태: {(_fan.Power == Fan.POWER_STATE.POWER_ON ? "켜짐" : "꺼짐") }");
             Console.WriteLine($"바람 세기: {_fan.Speed switch
             {
