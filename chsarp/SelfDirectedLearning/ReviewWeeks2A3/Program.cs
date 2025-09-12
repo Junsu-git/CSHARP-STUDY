@@ -39,16 +39,20 @@ namespace reviewMain
         // Print Menu when user active program
         private static void PrintMenu()
         {
-            Console.WriteLine("========= 메인 프로그램 시작 =========\n");
-            Console.WriteLine("실행가능 프로그램 목록");
-            Console.WriteLine("1. 선풍기 관리 프로그램\n");
-            Console.WriteLine("0. 종료\n");
+            Console.WriteLine("===== 프로그램 시작 =====\n");
+            Console.WriteLine("실행가능 프로그램 목록\n");
+            // till here you can add any program list
+            Console.WriteLine("1. 선풍기 관리 프로그램");
+
+
+            Console.WriteLine("\n0. 종료\n");
+            Console.WriteLine("=========================\n");
         }
 
         // Quit program
         private static void QuitProgram()
         {
-            Console.WriteLine("========= 프로그램 종료 =========");
+            Console.WriteLine("\n===== 프로그램 종료 =====\n");
             Environment.Exit(1);
         }
     }

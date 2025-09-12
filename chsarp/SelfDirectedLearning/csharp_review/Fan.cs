@@ -48,6 +48,13 @@ namespace reviewLib
             this.Swing = SWING_STATE.SWING_OFF;
             this.Speed = SPEED_STATE.SPEED_LV0;
         }
+
+        public void Apply(Fan _fan)
+        {
+            this.power = _fan.Power;
+            this.Swing = _fan.Swing;
+            this.Speed = _fan.Speed;
+        }
     }
 }
 

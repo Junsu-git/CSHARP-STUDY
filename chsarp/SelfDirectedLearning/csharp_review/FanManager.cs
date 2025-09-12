@@ -24,6 +24,12 @@
         {
             return list.Count <= uInput;
         }
+
+        public bool IsValidIndex(int uInput)
+        {
+            if (uInput >= 0 && !(IsListOverflow(uInput))) return true;
+            else return false;
+        } 
     }
 }
 

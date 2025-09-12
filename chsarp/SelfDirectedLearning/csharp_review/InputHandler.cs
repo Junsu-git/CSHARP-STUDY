@@ -12,14 +12,14 @@
                 Console.Write("잘못 된 입력\n");
             }
         }
-        public static int GetAmountInput()
+        public static int GetIntInput()
         {
             while (true)
             {
                 Console.Write("입력: ");
                 if (int.TryParse(Console.ReadLine(), out int uInput))
                     return uInput;
-                Console.WriteLine("잘못된 입력\n");
+                Console.WriteLine("잘못된 타입 입력\n");
             }
         }
     }
