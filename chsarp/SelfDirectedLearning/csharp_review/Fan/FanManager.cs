@@ -1,4 +1,4 @@
-﻿namespace reviewLib
+﻿namespace reviewLib.Fan
 {
     internal class FanManager
     {
@@ -27,7 +27,7 @@
 
         public bool IsValidIndex(int uInput)
         {
-            if (uInput >= 0 && !(IsListOverflow(uInput))) return true;
+            if (uInput >= 0 && !IsListOverflow(uInput)) return true;
             else return false;
         } 
 
@@ -47,5 +47,10 @@
             Console.WriteLine($"회전 상태: {(_fan.Swing == Fan.SWING_STATE.SWING_ON ? "켜짐" : "꺼짐")}");
             Console.WriteLine("==================================\n");
         }
+        // 타이머 기능 추가
+        // system.timers.timer
+        // system.threading.timer
+
+
     }
 }

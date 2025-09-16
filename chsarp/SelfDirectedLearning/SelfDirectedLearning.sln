@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35919.96 d17.13
+VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reviewMain", "ReviewWeeks2A3\reviewMain.csproj", "{F5340F0E-409D-4FCD-85D9-A7F4219C8CF4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "reviewLib", "csharp_review\reviewLib.csproj", "{FC2EA4EB-C050-8D49-0EC4-6372A5A3E07C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp_003-1_Fan", "csharp_003-1_Fan\csharp_003-1_Fan.csproj", "{D76BB419-B9D7-1F39-39E2-24862A3D3A50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp_004_ex", "csharp_004_ex\csharp_004_ex.csproj", "{DC40BD0F-FD85-4476-BFEB-1EE2A2F5964B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{D76BB419-B9D7-1F39-39E2-24862A3D3A50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D76BB419-B9D7-1F39-39E2-24862A3D3A50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D76BB419-B9D7-1F39-39E2-24862A3D3A50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC40BD0F-FD85-4476-BFEB-1EE2A2F5964B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC40BD0F-FD85-4476-BFEB-1EE2A2F5964B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC40BD0F-FD85-4476-BFEB-1EE2A2F5964B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC40BD0F-FD85-4476-BFEB-1EE2A2F5964B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

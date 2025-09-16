@@ -1,5 +1,4 @@
-﻿
-namespace reviewLib
+﻿namespace reviewLib.Fan
 {
     class Fan
     {
@@ -43,17 +42,17 @@ namespace reviewLib
 
         public Fan(int _index)
         {
-            this.Index = _index;
-            this.Power = POWER_STATE.POWER_OFF;
-            this.Swing = SWING_STATE.SWING_OFF;
-            this.Speed = SPEED_STATE.SPEED_LV0;
+            Index = _index;
+            Power = POWER_STATE.POWER_OFF;
+            Swing = SWING_STATE.SWING_OFF;
+            Speed = SPEED_STATE.SPEED_LV0;
         }
 
         public void Apply(Fan _fan)
         {
-            this.power = _fan.Power;
-            this.Swing = _fan.Swing;
-            this.Speed = _fan.Speed;
+            power = _fan.Power;
+            Swing = _fan.Swing;
+            Speed = _fan.Speed;
         }
     }
 }

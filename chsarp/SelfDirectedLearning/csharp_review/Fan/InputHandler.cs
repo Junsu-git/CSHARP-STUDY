@@ -1,4 +1,4 @@
-﻿namespace reviewLib
+﻿namespace reviewLib.Fan
 {
     public static class InputHandler
     {        

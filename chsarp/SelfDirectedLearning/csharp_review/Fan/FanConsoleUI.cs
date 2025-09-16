@@ -2,7 +2,7 @@
 using System.Reflection.Metadata;
 using System.Runtime.Versioning;
 
-namespace reviewLib
+namespace reviewLib.Fan
 {
     public class FanConsoleUI
     {
