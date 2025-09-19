@@ -2,8 +2,8 @@
 {
     public class Employee
     {
-        string name;
-        string position;
+        string? name;
+        string? position;
 
         public void SetName(string name)
         {
