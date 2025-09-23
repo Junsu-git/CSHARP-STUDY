@@ -1,16 +1,22 @@
-﻿namespace csharp_005_task
+﻿using System.ComponentModel;
+using System.Runtime.InteropServices;
+
+namespace csharp_005_task
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Circulator circulator = new Circulator();
-            circulator.SetPower(Circulator.POWER_STATUS.On);
-            circulator.SetWindSpeed(3);
-            circulator.SetTimer(5); // 5초 타이머 설정 (5초 후에 자동으로 꺼지도록)
-            circulator.SetWindMode(Circulator.WIND_MODE.NATURAL);
-            circulator.SetSwing(Circulator.SWING_STATUS.Off);
-            circulator.DisplayStatus();
+            List<Circulator> cirList = new List<Circulator>();
+            CreateCirc(cirList, 200);
+
+            PrintCircAll(cirList);
+            //circulator.SetPower(Circulator.POWER_STATUS.On);
+            //circulator.SetWindSpeed(3);
+            //circulator.SetTimer(5); // 5초 타이머 설정 (5초 후에 자동으로 꺼지도록)
+            //circulator.SetWindMode(Circulator.WIND_MODE.NATURAL);
+            //circulator.SetSwing(Circulator.SWING_STATUS.Off);
+            //circulator.DisplayStatus();
 
             // 리드 라인을 통한 컴파일러 블로킹 설정
             Console.ReadLine();
@@ -30,6 +36,20 @@
             // 4. 모드 설정 (냉방, 난방, 제습, 송풍)
             
 
+        }
+
+        private static void PrintCircAll(List<Circulator> cirList)
+        {
+            foreach(var cir in cirList)
+                //cir.PrintIndex();
+        }
+
+        private static void CreateCirc(List<Circulator> list, int time)
+        {
+            for(int i = 0; i < time; i++)
+            {
+                list.Add(new Circulator(i));
+            }
         }
     }
 }
