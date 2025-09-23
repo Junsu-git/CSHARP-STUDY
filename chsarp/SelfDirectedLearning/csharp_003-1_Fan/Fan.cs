@@ -10,7 +10,8 @@ namespace csharp_003_1_Fan
 {
     public class Fan
     {
-
+        
+        
         // 전원 상태 -> timer 가 0이 됐을 때 timer 상태를 자동으로 바꿈
         //private System.Timers.Timer? aTimer;
 
@@ -32,6 +33,8 @@ namespace csharp_003_1_Fan
                 }
             }
         }
+
+       
 
         public PWR_SWING Swing
         {
