@@ -5,9 +5,15 @@ namespace csharp_005_task
 {
     internal class Circulator
     {
-        int Index { get; set; }     // 읽고 쓰기 가능해야함
-        PWR_MENU Power { 
-            get;
+        int index;
+        
+        public int Index { 
+            get => index; 
+            set index => value;
+        }     // 읽고 쓰기 가능해야함
+
+        public PWR_MENU Power {
+            get => ;
             set
             {
                 Power = value;
