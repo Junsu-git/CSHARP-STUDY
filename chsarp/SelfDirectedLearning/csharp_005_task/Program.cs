@@ -9,9 +9,6 @@ namespace csharp_005_task
         static void Main(string[] args)
         {
             List<Circulator> cirList = new List<Circulator>();
-            CreateCirc(cirList, 200);
-
-            PrintCircAll(cirList);
             //circulator.SetPower(Circulator.POWER_STATUS.On);
             //circulator.SetWindSpeed(3);
             //circulator.SetTimer(5); // 5초 타이머 설정 (5초 후에 자동으로 꺼지도록)
@@ -39,18 +36,6 @@ namespace csharp_005_task
 
         }
 
-        private static void PrintCircAll(List<Circulator> cirList)
-        {
-            foreach(var cir in cirList)
-                //cir.PrintIndex();
-        }
 
-        private static void CreateCirc(List<Circulator> list, int time)
-        {
-            for(int i = 0; i < time; i++)
-            {
-                list.Add(new Circulator(i));
-            }
-        }
     }
 }
