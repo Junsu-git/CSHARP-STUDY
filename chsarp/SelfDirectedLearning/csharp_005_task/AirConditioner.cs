@@ -34,7 +34,7 @@ namespace csharp_005_task
         // 정의 된 각 상태 열거
         enum MODE { UNKOWN, COOLER, HEATER, DEHUM, CIRCU, AI, Off }
         enum WIND { UNKNOWN, LEAST, BREEZE, LIGHT, MEDIUM, STRONG, Off }
-
+        
         // 출력 매개변수를 위한 열거형
         public enum MENU { POWER, MODE, WIND }
 
@@ -85,7 +85,7 @@ namespace csharp_005_task
             IsOn = true;
             PrintChange(MENU.POWER);
         }
-
+        
         // 전원 끄기
         public void PowerOff()
         {
@@ -103,7 +103,7 @@ namespace csharp_005_task
         // 전원 예외처리
         public bool IsPowerOn()
         {
-            if (IsOn) return true;
+            if(IsOn) return true;
             return false;
         }
 
@@ -116,8 +116,7 @@ namespace csharp_005_task
                 return;
             }
             preMode = mode;
-            switch (input)
-            {
+            switch (input) {
                 case (int)MODE.COOLER:
                     mode = MODE.COOLER; break;
                 case (int)MODE.HEATER:
@@ -172,7 +171,7 @@ namespace csharp_005_task
                 default:
                     wind = WIND.UNKNOWN; break;
             }
-            PrintChange(MENU.WIND);
+            PrintChange (MENU.WIND);
         }
 
         // 바람 상태 받기
@@ -202,11 +201,11 @@ namespace csharp_005_task
         // 상태 변경시 출력
         public void PrintChange(MENU menu)
         {
-            if (menu == MENU.POWER)
+            if(menu == MENU.POWER)
                 Console.WriteLine($"POWER : TURN {(IsOn ? "ON" : "OFF")}");
-            else if (menu == MENU.WIND)
+            else if(menu == MENU.WIND)
                 Console.WriteLine($"WIND : {preWind} TO {wind}");
-            else if (menu == MENU.MODE)
+            else if(menu == MENU.MODE)
                 Console.WriteLine($"MODE : {preMode} TO {mode}");
         }
     }

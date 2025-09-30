@@ -15,7 +15,7 @@ namespace csharp_003_1_Fan
         // 전원 상태 -> timer 가 0이 됐을 때 timer 상태를 자동으로 바꿈
         //private System.Timers.Timer? aTimer;
 
-        private string _name;
+        private string? name;
         private PWR_SPEED _speed;
         private PWR_STATUS _status;
         private PWR_SWING _swing;
@@ -63,7 +63,7 @@ namespace csharp_003_1_Fan
         // 이닛 할 때
         private void Init(string name = "DEFAULT")
         {
-            _name = name;
+            this.name = name;
             _speed = 0;
             _status = PWR_STATUS.PWR_OFF;
             _speed = PWR_SPEED.SPD_LV_0;
@@ -71,7 +71,7 @@ namespace csharp_003_1_Fan
         }
         public string GetFanName()
         {
-            return _name;
+            return name;
         }
 
         // 회전 여부 변경
@@ -79,7 +79,7 @@ namespace csharp_003_1_Fan
         {
             if (!isPowerOn()) return;
             _swing = status;
-            Console.WriteLine($"[ INFO ] FAN_{_name} SWING {(this._swing == Fan.PWR_SWING.SWING_ON ? "ON" : "OFF")}");
+            Console.WriteLine($"[ INFO ] FAN_{name} SWING {(this._swing == Fan.PWR_SWING.SWING_ON ? "ON" : "OFF")}");
         }
 
         // 전원 켜짐 여부 예외처리
@@ -120,7 +120,7 @@ namespace csharp_003_1_Fan
         private void ChangeFanSpeed(PWR_SPEED speed)
         {
             Speed = speed;
-            Console.WriteLine($"[ INFO ] FAN_{_name} SPEED_LEVEL CHANGED TO {Speed switch
+            Console.WriteLine($"[ INFO ] FAN_{name} SPEED_LEVEL CHANGED TO {Speed switch
             {
                 Fan.PWR_SPEED.SPD_LV_0 => "LV0",
                 Fan.PWR_SPEED.SPD_LV_1 => "LV1",
@@ -132,7 +132,7 @@ namespace csharp_003_1_Fan
         }
         public void PrintFan()
         {
-            Console.WriteLine($"[ INFO ] PRINT FAN_{_name}\n");
+            Console.WriteLine($"[ INFO ] PRINT FAN_{name}\n");
             Console.WriteLine($"POWER_STATE = {(this._status == Fan.PWR_STATUS.PWR_ON ? "ON" : "OFF")}");
             Console.WriteLine($"\tSPEED_LEVEL = {this._speed switch
             {
@@ -150,14 +150,14 @@ namespace csharp_003_1_Fan
         {
             if (isPowerOn()) return;
             this._status = Fan.PWR_STATUS.PWR_ON;
-            Console.WriteLine($"[ INFO ] FAN_{_name} TURN ON");
+            Console.WriteLine($"[ INFO ] FAN_{name} TURN ON");
         }
 
         public void PowerOff()
         {
             if (!isPowerOn()) return;
             Power = PWR_STATUS.PWR_OFF;
-            Console.WriteLine($"[ INFO ] FAN_{_name} TURN OFF\n");
+            Console.WriteLine($"[ INFO ] FAN_{name} TURN OFF\n");
             PrintFan();
         }
     }
