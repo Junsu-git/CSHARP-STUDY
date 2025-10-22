@@ -9,6 +9,6 @@ namespace Chap7.ReadOnlyField
 {
     internal class ReadOnlyFields
     {
-        configuration c = 
+        //configuration c = 
     }
 }
