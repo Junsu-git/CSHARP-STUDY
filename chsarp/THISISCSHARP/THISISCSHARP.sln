@@ -9,6 +9,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chap7", "Chap7", "{C8D5274F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chap7", "DeepCopy\Chap7.csproj", "{407A7404-C67C-4E53-9E7D-BF29B8FF9A6F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chap18", "Chap18", "{9C68C07F-C09D-4D20-9533-C3C9F731C8D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dir", "ConsoleApp1\Dir.csproj", "{CD411A82-6777-45F5-8F37-AF14B7A1FED4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,12 +27,17 @@ Global
 		{407A7404-C67C-4E53-9E7D-BF29B8FF9A6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{407A7404-C67C-4E53-9E7D-BF29B8FF9A6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{407A7404-C67C-4E53-9E7D-BF29B8FF9A6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD411A82-6777-45F5-8F37-AF14B7A1FED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD411A82-6777-45F5-8F37-AF14B7A1FED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD411A82-6777-45F5-8F37-AF14B7A1FED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD411A82-6777-45F5-8F37-AF14B7A1FED4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{407A7404-C67C-4E53-9E7D-BF29B8FF9A6F} = {C8D5274F-AC00-46C7-1F8D-E88E81087A52}
+		{CD411A82-6777-45F5-8F37-AF14B7A1FED4} = {9C68C07F-C09D-4D20-9533-C3C9F731C8D1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A517C229-DBC1-4968-A4BC-00ADCB64F7B2}

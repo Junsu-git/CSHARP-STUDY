@@ -3,7 +3,7 @@ using Chap7.MethodHiding;
 using Chap7.ExtentionMethod;
 using Chap7.Overriding;
 
-namespace Main
+namespace Dir
 {
     internal class Program
     {

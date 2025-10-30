@@ -21,9 +21,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp_006_inheritance", "c
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "charp_008_Thread", "CHarp_008_Thread\charp_008_Thread.csproj", "{573D81D3-9ED6-4A2B-A60E-237034B82A94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp009_Thread2", "csharp009_Thread2\csharp009_Thread2.csproj", "{8EAC1209-6D7C-4A4C-BF1B-4B9639E930A2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp_009_Thread2", "csharp009_Thread2\csharp_009_Thread2.csproj", "{8EAC1209-6D7C-4A4C-BF1B-4B9639E930A2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "chsarp_009_Thread3", "chsarp_009_Thread3\chsarp_009_Thread3.csproj", "{36DC4AFF-6062-43D1-A072-24D2CBAA4DCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp_009_task", "csharp_009_task\csharp_009_task.csproj", "{5985A4BA-0E32-4764-A7B2-BD52F2016B7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{36DC4AFF-6062-43D1-A072-24D2CBAA4DCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36DC4AFF-6062-43D1-A072-24D2CBAA4DCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36DC4AFF-6062-43D1-A072-24D2CBAA4DCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5985A4BA-0E32-4764-A7B2-BD52F2016B7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5985A4BA-0E32-4764-A7B2-BD52F2016B7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5985A4BA-0E32-4764-A7B2-BD52F2016B7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5985A4BA-0E32-4764-A7B2-BD52F2016B7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
