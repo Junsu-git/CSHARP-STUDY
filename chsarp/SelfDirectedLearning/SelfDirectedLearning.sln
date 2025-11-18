@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp_010_Thread", "csharp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp_010_ThreadPool", "csharp_010_ThreadPool\csharp_010_ThreadPool.csproj", "{AA965942-2333-4623-9833-2D0822843E4E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp_012_event", "csharp_012_event\csharp_012_event.csproj", "{56002DF4-6F5D-4188-BD82-5F5638B16D3A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{AA965942-2333-4623-9833-2D0822843E4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA965942-2333-4623-9833-2D0822843E4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA965942-2333-4623-9833-2D0822843E4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56002DF4-6F5D-4188-BD82-5F5638B16D3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56002DF4-6F5D-4188-BD82-5F5638B16D3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56002DF4-6F5D-4188-BD82-5F5638B16D3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56002DF4-6F5D-4188-BD82-5F5638B16D3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
