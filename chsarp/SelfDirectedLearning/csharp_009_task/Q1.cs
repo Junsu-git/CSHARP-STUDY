@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
+using System.Threading.Channels;
 using System.Threading.Tasks;
 
 namespace csharp_009_task
@@ -14,7 +15,8 @@ namespace csharp_009_task
 
         // 계산할 총 숫자와 스레드 개수
         const Int64 maxNum = 100_000_000_000; // 천억
-        const int threadCount = 8;// Environment.ProcessorCount와 동일하게 설정
+        const int threadCount = 16;// Environment.ProcessorCount와 동일하게 설정
+
 
         // 각 스레드가 계산한 '부분 합계'를 저장할 배열
         // 각 스레드는 자신의 'index'에만 값을 쓰므로 'lock'이 필요 없음
@@ -106,7 +108,7 @@ namespace csharp_009_task
             Console.WriteLine($"Correct: {totalSum == expectedSum}");
             Console.WriteLine();
 
-            /* 결론 (원본 코드의 결론)
+            /* 결론
              * 1번 함수의 경우, cpu 사용률이 최대 40퍼센트를 넘기 힘들다
              * 다만 cpu가 대기하는 시간이 길어지기 때문에, stopwatch에 찍히는 시간은 훨씬 더 길다.
              * 이유 : cpu에서 입출력 채널로의 통신이, only cpu 연산보다 훨씬 느리기 때문

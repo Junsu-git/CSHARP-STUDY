@@ -8,16 +8,18 @@ namespace csharp_010_Thread
         private static bool _running = false;
         private static bool _cancleRequest = false;
 
-
         static void Main(string[] args)
         {
             //List<int> radiusList = new List<int>();
             Queue<int> radiusQueue = new Queue<int>();
             // Caution Queue Thread = unsafe
+            // 쓰레드로 처리하면 좋은곳
             for (int i = 0; i < 65500; i++)
             {
                 radiusQueue.Enqueue(i);
             }
+            // run 은 q의 인덱싱에 따라서 처리 하면 되겠죠? 시작점 과 끝점
+            
             Thread t2 = new Thread(Run);
             ThreadEnable();
             t2.Start(radiusQueue);

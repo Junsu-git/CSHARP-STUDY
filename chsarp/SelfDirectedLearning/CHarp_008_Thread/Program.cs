@@ -45,8 +45,6 @@ namespace charp_008_Thread
             //}
             Thread.Sleep(5_000);
             Console.WriteLine($"RESULT = [ {sum} ]");
-
-            //Console.ReadLine();
         }
     }
 }
