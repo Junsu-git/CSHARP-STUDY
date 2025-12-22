@@ -1,4 +1,4 @@
-﻿namespace Chap1
+﻿namespace FindGuitarTest
 {
     internal class Inventory
     {
@@ -8,33 +8,34 @@
             guitars = new List<Guitar>();
         }
 
-        public void AddGuitar(string serialNumber, string builder, string model, string type, string backWood, string topWood, double price)
+        public void AddGuitar(string serialNumber, Builder builder, string model, Type type, Wood backWood, Wood topWood, double price)
         {
             Guitar guitar = new Guitar(serialNumber, builder, model, type, backWood, topWood, price);
             guitars.Add(guitar);
         }
-        public Guitar Search(Guitar searchGuitar)
+        public List<Guitar> Search(Guitar searchGuitar)
         {
+            List<Guitar> matchingGuitars = new List<Guitar>();
             foreach (Guitar guitar in guitars)
             {
-                string builder = searchGuitar.GetBuilder();
+                Builder builder = searchGuitar.GetBuilder();
                 if ((builder != null) && (!builder.Equals("")) && (!builder.Equals(guitar.GetBuilder())))
                     continue;
-                string model = searchGuitar.GetModel();
-                if ((model != null) && (!model.Equals("")) && (!model.Equals(guitar.GetModel())))
+                string model = searchGuitar.GetModel().ToLower();
+                if ((model != null) && (!model.Equals("")) && (!model.Equals(guitar.GetModel().ToLower())))
                     continue;
-                string type = searchGuitar.GetType();
+                Type type = searchGuitar.GetType();
                 if ((type != null) && (!type.Equals("")) && (!type.Equals(guitar.GetType())))
                     continue;
-                string backWood = searchGuitar.GetBackWood();
+                Wood backWood = searchGuitar.GetBackWood();
                 if ((backWood != null) && (!backWood.Equals("")) && (!backWood.Equals(guitar.GetBackWood())))
                     continue;
-                string topWood = searchGuitar.GetTopWood();
+                Wood topWood = searchGuitar.GetTopWood();
                 if ((topWood != null) && (!topWood.Equals("")) && (!topWood.Equals(guitar.GetTopWood())))
                     continue;
-                return guitar;
+                matchingGuitars.Add(guitar);
             }
-            return null;
+            return matchingGuitars;
         }
     }
 }

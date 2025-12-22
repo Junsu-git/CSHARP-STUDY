@@ -1,27 +1,29 @@
-﻿namespace Chap1
+﻿using System.Reflection.Metadata.Ecma335;
+
+namespace FindGuitarTest
 {
     internal class Guitar
     {
-        private string serialNumber, builder, model, type, backWood, topWood;
+        private string serialNumber, model;
         private double price;
+        GuitarSpec guitarSpec;
 
-        public Guitar(string serialNumber, string builder, string model, string type, string backWood, string topWood, double price)
+        public Guitar(string serialNumber, Builder builder, string model, Type type, Wood topWood, Wood backWood, double price)
         {
             this.serialNumber = serialNumber;
             this.builder = builder;
+            this.guitarSpec.
             this.model = model;
             this.type = type;
             this.backWood = backWood;
             this.topWood = topWood;
             this.price = price;
         }
+
         public string GetSerialNumber() { return serialNumber; }
         public double GetPrice() { return price; }
         public void SetPrice(double newPrice) { price = newPrice; }
-        public string GetBuilder() { return builder; }
-        public string GetModel() { return model; }
-        public new string GetType() { return type; }
-        public string GetBackWood() { return backWood; }
-        public string GetTopWood() { return topWood; }
+        
+        public GuitarSpec GetGuitarSpec() { return guitarSpec; }
     }
 }
