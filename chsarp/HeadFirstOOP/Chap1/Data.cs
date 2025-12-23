@@ -1,11 +1,9 @@
-﻿namespace FindGuitarTest
+﻿namespace FindGuitarTest // java의 enum 대용
 {
     public class Builder
     {
         public string Name { get; }
-        private Builder(string name) { Name = name; } // private 생성자
-
-        // ★ 여기서 바로 접근 가능하도록 선언!
+        private Builder(string name) { Name = name; }
         public static readonly Builder Fender = new Builder("Fender");
         public static readonly Builder Martin = new Builder("Martin");
         public static readonly Builder Gibson = new Builder("Gibson");
@@ -16,7 +14,6 @@
 
         public new string ToString() => Name;
     }
-
     public class Type
     {
         public string Name { get; }
@@ -27,8 +24,6 @@
 
         public new string ToString() => Name;
     }
-
-    // [Wood.cs]
     public class Wood
     {
         public string Name { get; }
@@ -44,6 +39,15 @@
         public static readonly Wood Alder = new Wood("Alder");
         public static readonly Wood Sitka = new Wood("Sitka");
 
+        public new string ToString() => Name;
+    }
+
+    public class NumString
+    {
+        public string Name { get; }
+        private NumString(string name) { Name = name; }
+        public static readonly NumString Six = new NumString("6");
+        public static readonly NumString Twelve = new NumString("12");
         public new string ToString() => Name;
     }
 }
