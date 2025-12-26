@@ -9,20 +9,21 @@ namespace DogDoorSimulator
     internal class DogDoor
     {
         private bool open;
+        Barking Alllowed
         public DogDoor()
         {
             this.open = false;
         }
         public void Open()
         {
-            Console.WriteLine("The dog door opens.");
+            Console.WriteLine("The dog door opens.\n");
             open = true;
             _ = AutoCloseAsync(5000);
         }
 
         public void close()
         {
-            Console.WriteLine("The dog door closes.");
+            Console.WriteLine("The dog door closes.\n");
             open = false;
         }
         public bool IsOpen()
@@ -35,5 +36,10 @@ namespace DogDoorSimulator
             await Task.Delay(delayMs);
             if (IsOpen()) close();
         }   
+
+        public void SetAllowedDogSound()
+        {
+
+        }
     }
 }
